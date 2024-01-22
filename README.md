@@ -39,16 +39,14 @@ echo "Extraction complete."
 find "." -mindepth 2 -type f -name "*.pdb" -exec mv {} "." 
 ```
 
-Ensure the curated SAbDab structures have been saved to: input/sabdab_chains_renumb/
-
-All output files will be saved with the folder structure in a location that allows the next step to pick up and run all files in the relevant folder.
+NB: If you want to run a custom analysis with a specific loop - ensure that only that loop is uncommented in the ```_01_align_pipeline.py``` file.
 
 Files are run in the following order.
-1. Modify _01_align_pipeline.py to select the loop of interest. E.g uncomment ('L', 3, 10). Run this file to produce the aligned loops. These will be output to output/aligned/ followed by the relevant cdr and length.
-2. Run the _02_rmsd_pairwise.py file. This calculates the pairwise RMSD between all aligned loops and saves the results in a single long csv file.
-3. _03_run_mds.R converts this a pairwise matrix and runs multi-dimensional scaling on the matrix to produce the MDS corordinates.
-4. _04_dbscan.py carries out density based clustering on the pairwise matrix and outputs plots for different values of K as well as the cluster assignment for each value of K.
-5. _05_mds_vis.R visualised the MDS coordinates, creates logo plots and overlays the MDS plot with PyIgClassify2 assignments.
+1. Modify ```_01_align_pipeline.py``` to select the loop of interest. E.g uncomment ```('L', 3, 10)```. This script aligns all relevant loops to a template. These will be output to output/aligned/ directory in sub directories names by the relevant cdr and length.
+2. ```_02_rmsd_pairwise.py``` calculates the pairwise RMSD between all aligned loops and saves the results in a single long csv file.
+3. ```_03_run_mds.R``` converts this to a pairwise matrix and runs multi-dimensional scaling on the matrix to produce the MDS corordinates.
+4. ```_04_dbscan.py``` carries out density based clustering on the pairwise matrix and outputs plots for different values of K as well as the cluster assignment for each value of K.
+5. ```_05_mds_vis.R``` visualises the MDS coordinates, creates logo plots and overlays the MDS plot with PyIgClassify2 assignments.
 
 These can be run with the script:
 run_pipeline.sh

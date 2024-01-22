@@ -52,7 +52,7 @@ def align_oas_loops(query_seq, chain, cdr, root_dir, out_dir):
 
 def oas_align(chain, cdr, length, num):
     # specify input folder
-    root_dir = '../input/alex/'
+    root_dir = '../input/oas_structures/'
     out_dir = f'../output/aligned/chain_{chain}/cdr_{cdr}/length_{length}/'
 
     if chain == 'L':

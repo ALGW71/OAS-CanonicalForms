@@ -37,7 +37,7 @@ def template(chain, cdr, length):
 
     # make the template
     cmd.reinitialize()
-    cmd.load(f'../input/old_sabdab/{highest_res}.pdb', 'temp_in')
+    cmd.load(f'../input/imgt_sabdab/{highest_res}.pdb', 'temp_in')
     cmd.remove('solvent')
     cmd.remove('hydrogens')
     cmd.remove('sidechain')
