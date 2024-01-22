@@ -10,9 +10,9 @@ This repository contains code used to cluster CDR loops of predicted structures 
 Sequence motifs and density based clusters are given as SVG files. Folders are structured by CDR and length.
 
 ## Clustering pipeline
-Predicted structures can be downloaded from: https://zenodo.org/records/10280181
-To facilitate analysis of SAbDab structures, they have been curated into single chains and saved as individual pdb files per chain. These can be downloaded here:
-For assignment of PyIgClassify2 canonical cluster information the file: pyig_cdr_data.txt.gz can be downloaded from: http://dunbrack2.fccc.edu/PyIgClassify2/
+- Predicted structures can be downloaded from: https://zenodo.org/records/10280181
+- To facilitate analysis of SAbDab structures, they have been curated into single chains and saved as individual pdb files per chain. These can be downloaded here:
+- For assignment of PyIgClassify2 canonical cluster information the file: pyig_cdr_data.txt.gz can be downloaded from: http://dunbrack2.fccc.edu/PyIgClassify2/
 
 The above folder structure must be maintained to ensure outputs are placed into correct folders for subsequent steps of the pipeline to work.
 To run the clustering pipeline, ensure ABB2 structures (a small sample is fine, but may produce different results to when running on all) are downloaded and unpacked into: input/oas_structures/. Ensure the curated SAbDab structures have been saved to: input/sabdab_chains_renumb/
