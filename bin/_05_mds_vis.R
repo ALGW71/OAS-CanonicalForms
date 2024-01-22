@@ -1,6 +1,4 @@
-#setwd("/data/dragon226/awatson/dej_rip/bin/")
-
-source('./05_visualise_results/fxns/functions.R')
+source('./fxns/functions.R')
 
 source("master_eps_df.R")
 
