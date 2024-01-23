@@ -15,9 +15,9 @@ The git folder structure must be maintained to ensure outputs are placed into co
 
 ### Download the necessary structures and resource files.
 
-- Predicted structures can be downloaded from: https://zenodo.org/records/10280181
+- Predicted structures can be downloaded from: https://doi.org/10.5281/zenodo.10280180
 - The .tar.gz files containing the predicted structures should be downloaded to ``` input/oas_structures ```. A small sample of around 100K should be fine to run the code, but this may produce different results (clusters and logo plots) in comparison to when running on all 1.5M.
-- SAbDab structures and resource directories can be downloaded here: 
+- SAbDab structures and resource directories can be downloaded here: https://doi.org/10.5281/zenodo.10554753
 - Both SAbDab reference structures (```imgt_sabdab```) and the split structures (```sabdab_chains_renumb```) which have been curated into single chains and saved as individual pdb files per chain, are needed to run the code. These directories should be placed in the input folder (see placeholders). 
 - The resources (```resources```) folder contains the reference csv files, and RDS sequence files for downstream analysis. This should be at the top level (see placeholder).
 
