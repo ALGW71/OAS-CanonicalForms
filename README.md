@@ -24,7 +24,7 @@ The git folder structure must be maintained to ensure outputs are placed into co
 
 
 
-The files can be unpacked following the download by running the following command in the oas_structures folder after all files have been downloaded:
+The predicted structures can be unpacked following the download by running the following command in the oas_structures folder after all files have been downloaded:
 
 ```
 
