@@ -63,5 +63,5 @@ To add your own structure to the pipeline for clustering and inspection there ar
 5. Use a tool such as ANARCI or IgBLAST to identifier the CDR loops and lengths.
 6. Add the details of this to the file in ```resources/csvs/paired_info_cdrs.csv.gz``` at the first row! You will need to unzip the file and insert a new top row.
 7. Run the pipeline (for the loop of interest) and then modify the visualisation code to highlight where your loop of interest was clustered.
-8. If unfamiliar wit R the output ```vis_mds_..._length_...csv``` (contains the MDS coordinates) and ```eps_knn_..._length_...csv``` (contain the cluster membership for each value of K) files can be visualised in Python or a software of your choice.
+8. If unfamiliar with R, the output ```vis_mds_..._length_...csv``` (contains the MDS coordinates) and ```eps_knn_..._length_...csv``` (contains the cluster membership for each value of K) files can be visualised in Python or a software of your choice.
 9. If your structure does not appear, search the log files for your structure name. These will indicate how well the frameworks aligned and may show if you have not correctly calculated the IMGT CDR length.
