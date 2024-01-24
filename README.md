@@ -13,7 +13,7 @@ Sequence motifs and density based clusters are given as SVG files. Folders are s
 
 The git folder structure must be maintained to ensure outputs are placed into correct folders for subsequent steps of the pipeline to work.
 
-### Download the necessary structures and resource files.
+### Download and unpack the necessary structures and resources files.
 
 - Predicted structures can be downloaded from: https://doi.org/10.5281/zenodo.10280180
 - The .tar.gz files containing the predicted structures should be downloaded to ``` input/oas_structures ```. A small sample of around 100K should be fine to run the code, but this may produce different results (clusters and logo plots) in comparison to when running on all 1.5M.
@@ -39,6 +39,8 @@ echo "Extraction complete."
 find "." -mindepth 2 -type f -name "*.pdb" -exec mv {} "." 
 ```
 
+### Steps of the the pipeline
+
 NB: If you want to run a custom analysis with a specific loop - ensure that only that loop is uncommented in the ```_01_align_pipeline.py``` file.
 
 Files are run in the following order.
@@ -50,3 +52,16 @@ Files are run in the following order.
 
 These can be run with the script:
 run_pipeline.sh
+
+### Adding your own structure to the pipeline
+
+To add your own structure to the pipeline for clustering and inspection there are a couple of steps.
+1. The structure must be IMGT numbered in line with SAbDAB and ABB2 outputs.
+2. The heavy chain must be named 'H' and light chain named 'L'.
+3. You must name the structure with a unique pdb file name.
+4. Place the structure in the ``` input/oas_structures ``` folder.
+5. Use a tool such as ANARCI or IgBLAST to identifier the CDR loops and lengths.
+6. Add the details of this to the file in ```resources/csvs/paired_info_cdrs.csv.gz``` at the first row! You will need to unzip the file and insert a new top row.
+7. Run the pipeline (for the loop of interest) and then modify the visualisation code to highlight where your loop of interest was clustered.
+8. If unfamiliar wit R the output ```vis_mds_..._length_...csv``` (contains the MDS coordinates) and ```eps_knn_..._length_...csv``` (contain the cluster membership for each value of K) files can be visualised in Python or a software of your choice.
+9. If your structure does not appear, search the log files for your structure name. These will indicate how well the frameworks aligned and may show if you have not correctly calculated the IMGT CDR length.

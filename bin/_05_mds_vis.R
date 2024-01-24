@@ -24,9 +24,7 @@ plot_dbscan <- function(csv, dist, dunbrack_length, chain, cdrx, cdr_len){
   write_csv(samps, file = paste0("../output/aligned/", "CDR", cdrx,
                                  "_Length", cdr_len, ".csv"))
 
-  ov1 <- plot_overlay(df, cdrx, cdr_len)
   ov2 <- plot_overlay_bare(df, cdrx, cdr_len)
-  ov3 <- plot_overlay_white(df, cdrx, cdr_len)
   dbs <- plot_dbs(df, dist, chain, cdrx, cdr_len)
   minidbs <- plot_minidbs(df, dist, chain, cdrx, cdr_len)
   logo <- plot_logo(df, cdrx, cdr_len)
