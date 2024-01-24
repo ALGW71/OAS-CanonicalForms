@@ -57,13 +57,7 @@ master_df <- tibble(
               8,9,10,11,
               11, 12, 13, 14, 15, 16, 17, 18, 19))
 
-files <- "eps_knn_L_3_length_11.csv|eps_knn_L_3_length_10.csv|eps_knn_H_1_length_8.csv|eps_knn_L_3_length_9.csv|eps_knn_H_2_length_8.csv"
-
+# If only running a specific file
 # files <- "eps_knn_H_2_length_8.csv"
-
-# fl1 <- "eps_knn_H_3_length_11.csv|eps_knn_H_3_length_12.csv|eps_knn_H_3_length_13.csv|eps_knn_H_3_length_14.csv"
-# fl2 <- "eps_knn_H_3_length_15.csv|eps_knn_H_3_length_16.csv|eps_knn_H_3_length_17.csv|eps_knn_H_3_length_18.csv"
-# fl3 <- "eps_knn_H_3_length_19.csv"
-
-master_df <- master_df %>% filter(grepl(pattern = files, x =master_df$csv))
+# master_df <- master_df %>% filter(grepl(pattern = files, x =master_df$csv))
 
